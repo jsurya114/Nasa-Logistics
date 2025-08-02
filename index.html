@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -33,155 +31,177 @@
 <body class="bg-gradient-to-br from-orange-50 to-orange-100 text-gray-800 font-sans">
   <!-- Header -->
   <header class="bg-white/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-6">
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 bg-gradient-to-r from-nasa-orange-400 to-nasa-orange-600 rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-xl">N</span>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4 lg:py-6">
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-nasa-orange-400 to-nasa-orange-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg sm:text-xl">N</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-nasa-orange-600 to-nasa-orange-800 bg-clip-text text-transparent">
+            NASA Logistics
+          </h1>
         </div>
-        <h1 class="text-3xl font-bold bg-gradient-to-r from-nasa-orange-600 to-nasa-orange-800 bg-clip-text text-transparent">
-          NASA Logistics
-        </h1>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <a href="#features" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300 text-sm lg:text-base">Features</a>
+          <a href="#about" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300 text-sm lg:text-base">About</a>
+          <a href="auth.html" class="bg-nasa-orange-500 hover:bg-nasa-orange-600 text-white py-2 px-4 lg:px-6 rounded-full text-sm lg:text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+            Login
+          </a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <nav class="flex items-center space-x-6">
-        <a href="#features" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300">Features</a>
-        <a href="#about" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300">About</a>
-        <a href="auth.html" class="bg-nasa-orange-500 hover:bg-nasa-orange-600 text-white py-2 px-6 rounded-full text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-          Login
-        </a>
-      </nav>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-gray-200 mt-4">
+        <div class="flex flex-col space-y-3 pt-4">
+          <a href="#features" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300 py-2">Features</a>
+          <a href="#about" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300 py-2">About</a>
+          <a href="auth.html" class="bg-nasa-orange-500 hover:bg-nasa-orange-600 text-white py-3 px-6 rounded-full text-center shadow-lg transition-all duration-300">
+            Login
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative py-32 px-6 overflow-hidden">
+  <section class="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-r from-nasa-orange-100/50 to-orange-200/30"></div>
-    <div class="container mx-auto text-center relative z-10">
-      <div class="mb-8">
-        <span class="inline-block bg-nasa-orange-100 text-nasa-orange-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+    <div class="container mx-auto text-center relative z-10 max-w-6xl">
+      <div class="mb-6 sm:mb-8">
+        <span class="inline-block bg-nasa-orange-100 text-nasa-orange-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
           🚀 Smart Logistics Platform
         </span>
       </div>
-      <h2 class="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 sm:mb-8 leading-tight">
         <span class="bg-gradient-to-r from-nasa-orange-600 to-nasa-orange-800 bg-clip-text text-transparent">
           Streamline
         </span>
         <br>
         <span class="text-gray-800">Delivery Operations</span>
       </h2>
-      <p class="max-w-2xl mx-auto text-xl text-gray-600 mb-12 leading-relaxed">
+      <p class="max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-10 lg:mb-12 leading-relaxed px-4 sm:px-0">
         Manage drivers, optimize routes, track earnings, and generate comprehensive daily reports all in one powerful, centralized web application designed specifically for NASA Logistics.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="auth.html" class="bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600 hover:from-nasa-orange-600 hover:to-nasa-orange-700 text-white py-4 px-8 rounded-xl text-lg font-semibold shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+        <a href="auth.html" class="w-full sm:w-auto bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600 hover:from-nasa-orange-600 hover:to-nasa-orange-700 text-white py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg font-semibold shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
           Get Started Today
         </a>
-        <a href="#features" class="border-2 border-nasa-orange-500 text-nasa-orange-600 hover:bg-nasa-orange-500 hover:text-white py-4 px-8 rounded-xl text-lg font-semibold transition-all duration-300">
+        <a href="#features" class="w-full sm:w-auto border-2 border-nasa-orange-500 text-nasa-orange-600 hover:bg-nasa-orange-500 hover:text-white py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg font-semibold transition-all duration-300">
           Learn More
         </a>
       </div>
     </div>
     
-    <!-- Decorative Elements -->
-    <div class="absolute top-20 left-10 w-20 h-20 bg-nasa-orange-200 rounded-full opacity-50 animate-pulse"></div>
-    <div class="absolute bottom-20 right-10 w-32 h-32 bg-nasa-orange-300 rounded-full opacity-30 animate-pulse delay-1000"></div>
-    <div class="absolute top-1/2 right-20 w-16 h-16 bg-nasa-orange-400 rounded-full opacity-40 animate-pulse delay-500"></div>
+    <!-- Decorative Elements - Hidden on mobile -->
+    <div class="hidden sm:block absolute top-20 left-10 w-16 h-16 lg:w-20 lg:h-20 bg-nasa-orange-200 rounded-full opacity-50 animate-pulse"></div>
+    <div class="hidden sm:block absolute bottom-20 right-10 w-24 h-24 lg:w-32 lg:h-32 bg-nasa-orange-300 rounded-full opacity-30 animate-pulse delay-1000"></div>
+    <div class="hidden lg:block absolute top-1/2 right-20 w-16 h-16 bg-nasa-orange-400 rounded-full opacity-40 animate-pulse delay-500"></div>
   </section>
 
   <!-- Features Section -->
-  <section id="features" class="py-20 px-6 bg-white">
-    <div class="container mx-auto">
-      <div class="text-center mb-16">
-        <h3 class="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h3>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to manage your logistics operations efficiently</p>
+  <section id="features" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="container mx-auto max-w-7xl">
+      <div class="text-center mb-12 sm:mb-16">
+        <h3 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Powerful Features</h3>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">Everything you need to manage your logistics operations efficiently</p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">🚛</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+            <span class="text-white text-xl sm:text-2xl">🚛</span>
           </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Driver Management</h4>
-          <p class="text-gray-600 leading-relaxed">Efficiently manage your driver fleet with comprehensive profiles, scheduling, and performance tracking.</p>
+          <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Driver Management</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Efficiently manage your driver fleet with comprehensive profiles, scheduling, and performance tracking.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">🗺️</span>
+        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+            <span class="text-white text-xl sm:text-2xl">🗺️</span>
           </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Smart Routing</h4>
-          <p class="text-gray-600 leading-relaxed">Optimize delivery routes with AI-powered algorithms to reduce costs and improve efficiency.</p>
+          <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Smart Routing</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Optimize delivery routes with AI-powered algorithms to reduce costs and improve efficiency.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">💰</span>
+        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+            <span class="text-white text-xl sm:text-2xl">💰</span>
           </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Earnings Tracking</h4>
-          <p class="text-gray-600 leading-relaxed">Monitor and analyze earnings with detailed financial reports and real-time tracking capabilities.</p>
+          <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Earnings Tracking</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Monitor and analyze earnings with detailed financial reports and real-time tracking capabilities.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">📊</span>
+        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+            <span class="text-white text-xl sm:text-2xl">📊</span>
           </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Daily Reports</h4>
-          <p class="text-gray-600 leading-relaxed">Generate comprehensive daily reports with insights and analytics to drive business decisions.</p>
+          <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Daily Reports</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Generate comprehensive daily reports with insights and analytics to drive business decisions.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">⚡</span>
+        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+            <span class="text-white text-xl sm:text-2xl">⚡</span>
           </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Real-time Updates</h4>
-          <p class="text-gray-600 leading-relaxed">Stay connected with live updates on deliveries, driver status, and operational metrics.</p>
+          <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Real-time Updates</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Stay connected with live updates on deliveries, driver status, and operational metrics.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">🔒</span>
+        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+            <span class="text-white text-xl sm:text-2xl">🔒</span>
           </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Secure Platform</h4>
-          <p class="text-gray-600 leading-relaxed">Enterprise-grade security ensures your data and operations are protected at all times.</p>
+          <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Secure Platform</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Enterprise-grade security ensures your data and operations are protected at all times.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Stats Section -->
-  <section class="py-20 px-6 bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600">
-    <div class="container mx-auto">
-      <div class="grid md:grid-cols-4 gap-8 text-center text-white">
+  <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center text-white">
         <div>
-          <div class="text-4xl font-bold mb-2">500+</div>
-          <div class="text-nasa-orange-100">Active Drivers</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">500+</div>
+          <div class="text-nasa-orange-100 text-sm sm:text-base">Active Drivers</div>
         </div>
         <div>
-          <div class="text-4xl font-bold mb-2">10K+</div>
-          <div class="text-nasa-orange-100">Deliveries Monthly</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">10K+</div>
+          <div class="text-nasa-orange-100 text-sm sm:text-base">Deliveries Monthly</div>
         </div>
         <div>
-          <div class="text-4xl font-bold mb-2">99.9%</div>
-          <div class="text-nasa-orange-100">Uptime</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">99.9%</div>
+          <div class="text-nasa-orange-100 text-sm sm:text-base">Uptime</div>
         </div>
         <div>
-          <div class="text-4xl font-bold mb-2">24/7</div>
-          <div class="text-nasa-orange-100">Support</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">24/7</div>
+          <div class="text-nasa-orange-100 text-sm sm:text-base">Support</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 px-6 bg-gray-50">
-    <div class="container mx-auto">
-      <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-4xl font-bold text-gray-800 mb-8">About NASA Logistics</h3>
-        <p class="text-xl text-gray-600 leading-relaxed mb-8">
+  <section id="about" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="container mx-auto max-w-5xl">
+      <div class="text-center">
+        <h3 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8">About NASA Logistics</h3>
+        <p class="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
           NASA Logistics Carriers LLC is committed to revolutionizing the logistics industry through innovative technology solutions. Our platform combines cutting-edge route optimization, comprehensive fleet management, and real-time analytics to deliver unparalleled efficiency in delivery operations.
         </p>
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <h4 class="text-2xl font-bold text-nasa-orange-600 mb-4">Our Mission</h4>
-          <p class="text-gray-600 leading-relaxed">
+        <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg max-w-3xl mx-auto">
+          <h4 class="text-xl sm:text-2xl font-bold text-nasa-orange-600 mb-3 sm:mb-4">Our Mission</h4>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
             To empower logistics companies with intelligent, user-friendly tools that streamline operations, reduce costs, and enhance customer satisfaction through data-driven insights and automated processes.
           </p>
         </div>
@@ -190,60 +210,85 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 px-6 bg-gradient-to-br from-nasa-orange-100 to-orange-200">
-    <div class="container mx-auto text-center">
-      <h3 class="text-4xl font-bold text-gray-800 mb-6">Ready to Transform Your Operations?</h3>
-      <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+  <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-nasa-orange-100 to-orange-200">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h3 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">Ready to Transform Your Operations?</h3>
+      <p class="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto px-4 sm:px-0">
         Join hundreds of logistics companies already using NASA Logistics to optimize their delivery operations and boost profitability.
       </p>
-      <a href="auth.html" class="bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600 hover:from-nasa-orange-600 hover:to-nasa-orange-700 text-white py-4 px-10 rounded-xl text-xl font-semibold shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+      <a href="auth.html" class="inline-block bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600 hover:from-nasa-orange-600 hover:to-nasa-orange-700 text-white py-3 sm:py-4 px-8 sm:px-10 rounded-xl text-lg sm:text-xl font-semibold shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
         Start Your Journey Today
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12 px-6">
-    <div class="container mx-auto">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
+  <footer class="bg-gray-800 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div class="sm:col-span-2 lg:col-span-1">
           <div class="flex items-center space-x-3 mb-4">
             <div class="w-8 h-8 bg-gradient-to-r from-nasa-orange-400 to-nasa-orange-600 rounded-lg flex items-center justify-center">
               <span class="text-white font-bold">N</span>
             </div>
-            <h5 class="text-xl font-bold">NASA Logistics</h5>
+            <h5 class="text-lg sm:text-xl font-bold">NASA Logistics</h5>
           </div>
-          <p class="text-gray-400">Streamlining delivery operations with intelligent logistics solutions.</p>
+          <p class="text-gray-400 text-sm sm:text-base">Streamlining delivery operations with intelligent logistics solutions.</p>
         </div>
         <div>
-          <h6 class="font-semibold mb-4">Platform</h6>
-          <ul class="space-y-2 text-gray-400">
+          <h6 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Platform</h6>
+          <ul class="space-y-2 text-gray-400 text-sm sm:text-base">
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Features</a></li>
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Pricing</a></li>
             <li><a href="#" class="hover:text-nasa-orange-400 transition">API</a></li>
           </ul>
         </div>
         <div>
-          <h6 class="font-semibold mb-4">Company</h6>
-          <ul class="space-y-2 text-gray-400">
+          <h6 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Company</h6>
+          <ul class="space-y-2 text-gray-400 text-sm sm:text-base">
             <li><a href="#" class="hover:text-nasa-orange-400 transition">About</a></li>
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Careers</a></li>
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h6 class="font-semibold mb-4">Support</h6>
-          <ul class="space-y-2 text-gray-400">
+          <h6 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Support</h6>
+          <ul class="space-y-2 text-gray-400 text-sm sm:text-base">
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Help Center</a></li>
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Documentation</a></li>
             <li><a href="#" class="hover:text-nasa-orange-400 transition">Status</a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2025 NASA Logistics Carriers LLC. All rights reserved.</p>
+      <div class="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-400">
+        <p class="text-xs sm:text-sm">&copy; 2025 NASA Logistics Carriers LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
