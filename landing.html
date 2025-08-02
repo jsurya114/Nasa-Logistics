@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NASA Logistics - Smart Route Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard - NASA Logistics</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -28,220 +28,414 @@
     }
   </script>
 </head>
-<body class="bg-gradient-to-br from-orange-50 to-orange-100 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 min-h-screen">
   <!-- Header -->
-  <header class="bg-white/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-6">
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 bg-gradient-to-r from-nasa-orange-400 to-nasa-orange-600 rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-xl">N</span>
+  <header class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 bg-nasa-orange-500 rounded flex items-center justify-center">
+            <span class="text-white font-bold text-sm">N</span>
+          </div>
+          <h1 class="text-xl font-semibold text-gray-800">NASA Logistics</h1>
         </div>
-        <h1 class="text-3xl font-bold bg-gradient-to-r from-nasa-orange-600 to-nasa-orange-800 bg-clip-text text-transparent">
-          NASA Logistics
-        </h1>
+        
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-nasa-orange-500 rounded-full flex items-center justify-center">
+              <span class="text-white text-sm font-medium">JS</span>
+            </div>
+            <span class="text-sm font-medium text-gray-700">John Smith</span>
+          </div>
+          
+          <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm transition-colors">
+            Logout
+          </button>
+        </div>
       </div>
-      <nav class="flex items-center space-x-6">
-        <a href="#features" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300">Features</a>
-        <a href="#about" class="text-gray-700 hover:text-nasa-orange-600 transition-colors duration-300">About</a>
-        <a href="auth.html" class="bg-nasa-orange-500 hover:bg-nasa-orange-600 text-white py-2 px-6 rounded-full text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-          Login
-        </a>
-      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative py-32 px-6 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-nasa-orange-100/50 to-orange-200/30"></div>
-    <div class="container mx-auto text-center relative z-10">
-      <div class="mb-8">
-        <span class="inline-block bg-nasa-orange-100 text-nasa-orange-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-          🚀 Smart Logistics Platform
-        </span>
-      </div>
-      <h2 class="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
-        <span class="bg-gradient-to-r from-nasa-orange-600 to-nasa-orange-800 bg-clip-text text-transparent">
-          Streamline
-        </span>
-        <br>
-        <span class="text-gray-800">Delivery Operations</span>
-      </h2>
-      <p class="max-w-2xl mx-auto text-xl text-gray-600 mb-12 leading-relaxed">
-        Manage drivers, optimize routes, track earnings, and generate comprehensive daily reports all in one powerful, centralized web application designed specifically for NASA Logistics.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="auth.html" class="bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600 hover:from-nasa-orange-600 hover:to-nasa-orange-700 text-white py-4 px-8 rounded-xl text-lg font-semibold shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-          Get Started Today
-        </a>
-        <a href="#features" class="border-2 border-nasa-orange-500 text-nasa-orange-600 hover:bg-nasa-orange-500 hover:text-white py-4 px-8 rounded-xl text-lg font-semibold transition-all duration-300">
-          Learn More
-        </a>
-      </div>
-    </div>
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     
-    <!-- Decorative Elements -->
-    <div class="absolute top-20 left-10 w-20 h-20 bg-nasa-orange-200 rounded-full opacity-50 animate-pulse"></div>
-    <div class="absolute bottom-20 right-10 w-32 h-32 bg-nasa-orange-300 rounded-full opacity-30 animate-pulse delay-1000"></div>
-    <div class="absolute top-1/2 right-20 w-16 h-16 bg-nasa-orange-400 rounded-full opacity-40 animate-pulse delay-500"></div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="py-20 px-6 bg-white">
-    <div class="container mx-auto">
-      <div class="text-center mb-16">
-        <h3 class="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h3>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to manage your logistics operations efficiently</p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">🚛</span>
-          </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Driver Management</h4>
-          <p class="text-gray-600 leading-relaxed">Efficiently manage your driver fleet with comprehensive profiles, scheduling, and performance tracking.</p>
-        </div>
-        
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">🗺️</span>
-          </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Smart Routing</h4>
-          <p class="text-gray-600 leading-relaxed">Optimize delivery routes with AI-powered algorithms to reduce costs and improve efficiency.</p>
-        </div>
-        
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">💰</span>
-          </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Earnings Tracking</h4>
-          <p class="text-gray-600 leading-relaxed">Monitor and analyze earnings with detailed financial reports and real-time tracking capabilities.</p>
-        </div>
-        
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">📊</span>
-          </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Daily Reports</h4>
-          <p class="text-gray-600 leading-relaxed">Generate comprehensive daily reports with insights and analytics to drive business decisions.</p>
-        </div>
-        
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">⚡</span>
-          </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Real-time Updates</h4>
-          <p class="text-gray-600 leading-relaxed">Stay connected with live updates on deliveries, driver status, and operational metrics.</p>
-        </div>
-        
-        <div class="bg-gradient-to-br from-nasa-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-nasa-orange-500 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-white text-2xl">🔒</span>
-          </div>
-          <h4 class="text-2xl font-bold text-gray-800 mb-4">Secure Platform</h4>
-          <p class="text-gray-600 leading-relaxed">Enterprise-grade security ensures your data and operations are protected at all times.</p>
-        </div>
-      </div>
+    <!-- Welcome Section -->
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">Welcome back, John!</h2>
+      <p class="text-gray-600">Here's your performance overview for today</p>
     </div>
-  </section>
 
-  <!-- Stats Section -->
-  <section class="py-20 px-6 bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600">
-    <div class="container mx-auto">
-      <div class="grid md:grid-cols-4 gap-8 text-center text-white">
-        <div>
-          <div class="text-4xl font-bold mb-2">500+</div>
-          <div class="text-nasa-orange-100">Active Drivers</div>
+    <!-- Driver Profile Card -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+      <h3 class="text-lg font-semibold text-gray-900 mb-6">Driver Profile</h3>
+      <div class="flex items-start space-x-6">
+        <div class="w-24 h-24 bg-nasa-orange-500 rounded-full flex items-center justify-center">
+          <span class="text-3xl font-bold text-white">JS</span>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">10K+</div>
-          <div class="text-nasa-orange-100">Deliveries Monthly</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">99.9%</div>
-          <div class="text-nasa-orange-100">Uptime</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">24/7</div>
-          <div class="text-nasa-orange-100">Support</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6 bg-gray-50">
-    <div class="container mx-auto">
-      <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-4xl font-bold text-gray-800 mb-8">About NASA Logistics</h3>
-        <p class="text-xl text-gray-600 leading-relaxed mb-8">
-          NASA Logistics Carriers LLC is committed to revolutionizing the logistics industry through innovative technology solutions. Our platform combines cutting-edge route optimization, comprehensive fleet management, and real-time analytics to deliver unparalleled efficiency in delivery operations.
-        </p>
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <h4 class="text-2xl font-bold text-nasa-orange-600 mb-4">Our Mission</h4>
-          <p class="text-gray-600 leading-relaxed">
-            To empower logistics companies with intelligent, user-friendly tools that streamline operations, reduce costs, and enhance customer satisfaction through data-driven insights and automated processes.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-20 px-6 bg-gradient-to-br from-nasa-orange-100 to-orange-200">
-    <div class="container mx-auto text-center">
-      <h3 class="text-4xl font-bold text-gray-800 mb-6">Ready to Transform Your Operations?</h3>
-      <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-        Join hundreds of logistics companies already using NASA Logistics to optimize their delivery operations and boost profitability.
-      </p>
-      <a href="auth.html" class="bg-gradient-to-r from-nasa-orange-500 to-nasa-orange-600 hover:from-nasa-orange-600 hover:to-nasa-orange-700 text-white py-4 px-10 rounded-xl text-xl font-semibold shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-        Start Your Journey Today
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12 px-6">
-    <div class="container mx-auto">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center space-x-3 mb-4">
-            <div class="w-8 h-8 bg-gradient-to-r from-nasa-orange-400 to-nasa-orange-600 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold">N</span>
+        <div class="flex-1 grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Personal Information</h4>
+            <div class="space-y-3">
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Full Name:</span>
+                <span class="text-sm font-medium text-gray-900">John Smith</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Driver ID:</span>
+                <span class="text-sm font-medium text-gray-900">#D001</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">License Type:</span>
+                <span class="text-sm font-medium text-gray-900">CDL-A</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Phone:</span>
+                <span class="text-sm font-medium text-gray-900">(555) 123-4567</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Email:</span>
+                <span class="text-sm font-medium text-gray-900">john.smith@email.com</span>
+              </div>
             </div>
-            <h5 class="text-xl font-bold">NASA Logistics</h5>
           </div>
-          <p class="text-gray-400">Streamlining delivery operations with intelligent logistics solutions.</p>
+          <div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Work Information</h4>
+            <div class="space-y-3">
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Status:</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                  Active
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Hire Date:</span>
+                <span class="text-sm font-medium text-gray-900">January 15, 2023</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Vehicle Assigned:</span>
+                <span class="text-sm font-medium text-gray-900">Truck #T-045</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Rating:</span>
+                <div class="flex items-center">
+                  <span class="text-sm font-medium text-gray-900 mr-2">4.8</span>
+                  <div class="flex">
+                    <svg class="w-4 h-4 text-nasa-orange-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-nasa-orange-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-nasa-orange-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-nasa-orange-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                    <svg class="w-4 h-4 text-gray-300 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-gray-600">Total Deliveries:</span>
+                <span class="text-sm font-medium text-gray-900">1,247</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h6 class="font-semibold mb-4">Platform</h6>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Features</a></li>
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Pricing</a></li>
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">API</a></li>
-          </ul>
-        </div>
-        <div>
-          <h6 class="font-semibold mb-4">Company</h6>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">About</a></li>
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Careers</a></li>
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h6 class="font-semibold mb-4">Support</h6>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Help Center</a></li>
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Documentation</a></li>
-            <li><a href="#" class="hover:text-nasa-orange-400 transition">Status</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2025 NASA Logistics Carriers LLC. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+
+    <!-- Today's Performance Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm font-medium text-gray-600">Today's Earnings</p>
+            <p class="text-2xl font-bold text-gray-900">$285.50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm font-medium text-gray-600">Deliveries</p>
+            <p class="text-2xl font-bold text-gray-900">12</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-nasa-orange-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-nasa-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm font-medium text-gray-600">Hours Worked</p>
+            <p class="text-2xl font-bold text-gray-900">8.5</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm font-medium text-gray-600">Miles Driven</p>
+            <p class="text-2xl font-bold text-gray-900">156</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earnings Overview -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <!-- Weekly Earnings -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Weekly Earnings Breakdown</h3>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+              <span class="text-sm text-gray-600">Monday</span>
+            </div>
+            <span class="font-medium text-gray-900">$245.00</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+              <span class="text-sm text-gray-600">Tuesday</span>
+            </div>
+            <span class="font-medium text-gray-900">$320.75</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-nasa-orange-500 rounded-full mr-3"></div>
+              <span class="text-sm text-gray-600">Wednesday</span>
+            </div>
+            <span class="font-medium text-gray-900">$290.25</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+              <span class="text-sm text-gray-600">Thursday</span>
+            </div>
+            <span class="font-medium text-gray-900">$275.50</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-green-600 rounded-full mr-3"></div>
+              <span class="text-sm text-gray-600">Friday</span>
+            </div>
+            <span class="font-medium text-gray-900">$285.50</span>
+          </div>
+          <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+            <span class="font-semibold text-gray-900">Weekly Total</span>
+            <span class="text-xl font-bold text-nasa-orange-600">$1,417.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monthly Summary -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Monthly Summary</h3>
+        <div class="space-y-4">
+          <div class="bg-gray-50 rounded-lg p-4">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-gray-600">Total Earnings</span>
+              <span class="text-2xl font-bold text-nasa-orange-600">$5,680.25</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-nasa-orange-500 h-2 rounded-full" style="width: 75%"></div>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">75% of monthly goal ($7,500)</p>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <p class="text-2xl font-bold text-gray-900">89</p>
+              <p class="text-sm text-gray-600">Total Deliveries</p>
+            </div>
+            <div class="text-center">
+              <p class="text-2xl font-bold text-gray-900">1,245</p>
+              <p class="text-sm text-gray-600">Miles Driven</p>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <p class="text-2xl font-bold text-gray-900">168</p>
+              <p class="text-sm text-gray-600">Hours Worked</p>
+            </div>
+            <div class="text-center">
+              <p class="text-2xl font-bold text-gray-900">$33.81</p>
+              <p class="text-sm text-gray-600">Avg per Hour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Route & Recent Activity -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <!-- Current Route -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Current Route</h3>
+        <div class="space-y-4">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-medium text-gray-900">Route #R-2024-001</span>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                In Progress
+              </span>
+            </div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Start:</span>
+                <span class="text-gray-900">Warehouse A - 123 Industrial Blvd</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">End:</span>
+                <span class="text-gray-900">Distribution Center B - 456 Commerce St</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Distance:</span>
+                <span class="text-gray-900">45.2 miles</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Estimated Time:</span>
+                <span class="text-gray-900">2h 15m</span>
+              </div>
+            </div>
+          </div>
+          <button class="w-full bg-nasa-orange-500 hover:bg-nasa-orange-600 text-white py-2 px-4 rounded-md text-sm transition-colors">
+            View Route Map
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900">Delivery completed</p>
+              <p class="text-sm text-gray-600">123 Main Street - Package #PKG-4567</p>
+              <p class="text-xs text-gray-500">2 hours ago</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900">Route started</p>
+              <p class="text-sm text-gray-600">Route #R-2024-001 - 12 stops scheduled</p>
+              <p class="text-xs text-gray-500">8 hours ago</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 bg-nasa-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-nasa-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900">Vehicle inspection passed</p>
+              <p class="text-sm text-gray-600">Truck #T-045 - All systems normal</p>
+              <p class="text-xs text-gray-500">Yesterday at 7:30 AM</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900">Payment received</p>
+              <p class="text-sm text-gray-600">Weekly earnings deposited - $1,417.00</p>
+              <p class="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <svg class="w-8 h-8 text-nasa-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span class="text-sm font-medium text-gray-900">View Reports</span>
+        </button>
+        
+        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <svg class="w-8 h-8 text-nasa-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          <span class="text-sm font-medium text-gray-900">Edit Profile</span>
+        </button>
+        
+        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <svg class="w-8 h-8 text-nasa-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-sm font-medium text-gray-900">Help & Support</span>
+        </button>
+        
+        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <svg class="w-8 h-8 text-nasa-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span class="text-sm font-medium text-gray-900">Settings</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function logout() {
+      if (confirm('Are you sure you want to logout?')) {
+        window.location.href = 'auth.html';
+      }
+    }
+  </script>
 </body>
 </html>
+
+
